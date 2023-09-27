@@ -1,0 +1,1 @@
+[22-Feb-2023 20:47:04 America/New_York] PHP Warning:  mysqli_connect(): Headers and client library minor version mismatch. Headers:100337 Library:30120 in /home/lankparb/lankatours.at/php/PDBC.php on line 8
