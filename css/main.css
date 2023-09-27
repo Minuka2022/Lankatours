@@ -342,14 +342,11 @@ blockquote.normal {
 .card {
 
 	padding: 20px;
-	border-radius:8px;
 	text-align: left;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
 	padding: 15px 0;
-
 	font-size: 20px;
 }
 
@@ -5381,7 +5378,7 @@ a.thumbnail img {
 	position: static;
 }
 
-.nav-wrap {
+.d {
 	background: #2d2b46;
 	z-index: 3;
 }
