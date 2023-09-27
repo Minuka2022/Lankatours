@@ -1,0 +1,1 @@
+[09-Oct-2021 19:59:13 America/New_York] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/lankparb/lankatours.at/php/PDBC.php on line 8
