@@ -343,11 +343,15 @@ blockquote.normal {
 
 	padding: 20px;
 	text-align: left;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .card-body {
 	padding: 15px 0;
 	font-size: 20px;
+	
 }
 
 #wrapper {
