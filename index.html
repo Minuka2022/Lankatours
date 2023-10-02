@@ -170,33 +170,38 @@
                         <div class="bg-white border rounded rounded-2 my-3 py-5 text-lrft custom-border" style="padding:25px;"> <!-- Added custom-border class -->
                             <div class="mt-4" >
                                 <label for="travel-method">Wie wollen Sie reisen?</label>
-                                <select class="form-select" id="travel-method">
-                                    <option>Action</option>
-                                    <option>Another action</option>
-                                    <option>Something else here</option>
+                                <select class="form-select" id="travel-method" name="travel-method">
+                                    <option value="select">Select</option>
+                                    <option value="Alone">Alone</option>
+                                    <option value="As a pair">As a pair</option>
+                                    <option value="With the family">With the family</option>
+                                    <option value="With friends">With friends</option>
                                 </select>
                             </div>
     
                             <div class="mt-5">
                                 <label for="accommodation-type">Welche Art der Unterkunft wünschen Sie?</label>
-                                <select class="form-select" id="accommodation-type">
-                                    <option>Action</option>
-                                    <option>Another action</option>
-                                    <option>Something else here</option>
+                                <select class="form-select" id="accommodation-type" name="accommodation-type">
+                                    <option value="select">Select</option>
+                                    <option value="Budget (2 stars)">Budget (2 stars)</option>
+                                    <option value="Standard (3 stars - most booked)">Standard (3 stars - most booked)</option>
+                                    <option value="Comfort (4 stars)">Comfort (4 stars)</option>
+                                    <option value="Luxury (5+ stars)">Luxury (5+ stars)</option>
                                 </select>
                             </div>
     
                             <div class="mt-5">
                                 <label for="planning-progress">Wie weit sind Sie mit Ihrer Reiseplanung?</label>
-                                <select class="form-select" id="planning-progress">
-                                    <option>Action</option>
-                                    <option>Another action</option>
-                                    <option>Something else here</option>
+                                <select class="form-select" id="planning-progress" name="planning-progress">
+                                    <option value="select">Select</option>
+                                    <option value="A NEO travel specialist should advise me">A NEO travel specialist should advise me</option>
+                                    <option value="I already know roughly what I want">I already know roughly what I want</option>
+                                    <option value="I will book directly if your offer is right">I will book directly if your offer is right</option>
                                 </select>
                             </div>
     
                             <div class="mt-5">
-                                <a href="plan-your-sri-lanka-tour.html" class="btn btn-success fw-bold">Plan Your Trip</a>
+                                <a href="plan-your-sri-lanka-tour.html" id="plan-trip-button" class="btn btn-success fw-bold">Plan Your Trip</a>
                             </div>
                         </div>
                     </div>
@@ -204,7 +209,19 @@
             </div>
         </section>
     
-          
+        <script>
+            document.getElementById('plan-trip-button').addEventListener('click', function () {
+                // Get the selected values
+                var travelMethod = document.getElementById('travel-method').value;
+                var accommodationType = document.getElementById('accommodation-type').value;
+                var planningProgress = document.getElementById('planning-progress').value;
+        
+                // Store the selected values in local storage
+                localStorage.setItem('travelMethod_submit', travelMethod); // Unique ID for this page
+                localStorage.setItem('accommodationType_submit', accommodationType); // Unique ID for this page
+                localStorage.setItem('planningProgress_submit', planningProgress); // Unique ID for this page
+            });
+        </script>
 
         <main id="main">
 

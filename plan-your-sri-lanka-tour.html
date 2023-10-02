@@ -124,6 +124,10 @@
         </div>
     </section>
 
+
+
+
+
     <section class="offset-lg-2" style="padding-bottom:10px;padding-top:20px;">
         <div class="container">
             <div class="row">
@@ -132,6 +136,65 @@
                         <form autocomplete="off" action="contactform/tailormade.php" method="POST">
                             <div class="card">
                                 <div class="card-body">
+
+                                    <script>
+                                        // Function to set the form fields based on data from local storage
+                                        function autoFillFormFields() {
+                                            // Retrieve the stored values from local storage
+                                            var travelMethod = localStorage.getItem('travelMethod_submit'); // Unique ID for this page
+                                            var accommodationType = localStorage.getItem('accommodationType_submit'); // Unique ID for this page
+                                            var planningProgress = localStorage.getItem('planningProgress_submit'); // Unique ID for this page
+                                    
+                                            // Check if values exist and pre-fill the form fields
+                                            if (travelMethod !== null) {
+                                                document.getElementById('travel-method').value = travelMethod;
+                                            }
+                                            if (accommodationType !== null) {
+                                                document.getElementById('accommodation-type').value = accommodationType;
+                                            }
+                                            if (planningProgress !== null) {
+                                                document.getElementById('planning-progress').value = planningProgress;
+                                            }
+                                        }
+                                    
+                                        // Call the autoFillFormFields function when the page loads
+                                        window.addEventListener('load', autoFillFormFields);
+                                    </script>
+                                    
+                                    </script>
+                                            <div class="mt-4" >
+                                                <label for="travel-method">Wie wollen Sie reisen?</label>
+                                                <select class="form-select" id="travel-method" name="travel-method">
+                                                    <option value="select">Select</option>
+                                                    <option value="Alone">Alone</option>
+                                                    <option value="As a pair">As a pair</option>
+                                                    <option value="With the family">With the family</option>
+                                                    <option value="With friends">With friends</option>
+                                                </select>
+                                            </div>
+                    
+                                            <div class="mt-5">
+                                                <label for="accommodation-type">Welche Art der Unterkunft wünschen Sie?</label>
+                                                <select class="form-select" id="accommodation-type" name="accommodation-type">
+                                                    <option value="select">Select</option>
+                                                    <option value="Budget (2 stars)">Budget (2 stars)</option>
+                                                    <option value="Standard (3 stars - most booked)">Standard (3 stars - most booked)</option>
+                                                    <option value="Comfort (4 stars)">Comfort (4 stars)</option>
+                                                    <option value="Luxury (5+ stars)">Luxury (5+ stars)</option>
+                                                </select>
+                                            </div>
+                    
+                                            <div class="mt-5">
+                                                <label for="planning-progress">Wie weit sind Sie mit Ihrer Reiseplanung?</label>
+                                                <select class="form-select" id="planning-progress" name="planning-progress">
+                                                    <option value="select">Select</option>
+                                                    <option value="A NEO travel specialist should advise me">A NEO travel specialist should advise me</option>
+                                                    <option value="I already know roughly what I want">I already know roughly what I want</option>
+                                                    <option value="I will book directly if your offer is right">I will book directly if your offer is right</option>
+                                                </select>
+                                            </div>
+                    
+                                            <br>
                                     <div class="form-section">
                                         <p class="ltd-form-title fw-bold">I need a guide who speaks :</p>
                                         <div class="select-group select-group__center-text col-12">
