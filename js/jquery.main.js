@@ -1,3 +1,10 @@
+
+
+window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+
 (function($) {
     'use strict';
 

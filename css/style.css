@@ -9,10 +9,18 @@
 # General
 --------------------------------------------------------------*/
 
+
+
+
+
+
+
+
 body {
     background: #fff;
     color: #444;
     font-family: "Open Sans", sans-serif;
+    user-select: none; /* Disable text selection for the entire page */
 }
 
 a {
