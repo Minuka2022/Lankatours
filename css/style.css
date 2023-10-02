@@ -213,7 +213,7 @@ h6 {
 .inner-page-header .inner-page-header-background {
     min-height: 500px;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;;
   }
   .inner-page-header .page-heading {
     background-color: #413e66;
@@ -240,6 +240,13 @@ h6 {
   .page-link {
     color: #004658;
     font-weight: 500;
+  }
+
+  @media (min-width: 1400px) {
+    .inner-page-header .inner-page-header-background {
+      background-position-x: 50%;
+      background-size: cover;
+    }
   }
 
 
@@ -1591,6 +1598,12 @@ h6 {
     #testimonials .testimonial-item p {
         margin-left: 0;
     }
+
+    .inner-page-header .inner-page-header-background {
+        min-height: 352px;
+        background-position: 50% 76px;
+        background-size: 780px;
+      }
 }
 
 @media (max-width: 574px) {
