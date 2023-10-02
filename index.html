@@ -79,7 +79,17 @@
 
         <!-- Template Main Javascript File -->
         <script src="js/main.js"></script>
-
+        <style>
+            /* Additional CSS for styling the select element */
+            .select {
+                width: 150px; /* Adjust the width as needed */
+                margin: 0 auto; /* Center horizontally */
+            }
+            
+            .custom-border {
+                border: 2px solid #000; /* Set the border width and color as desired */
+            }
+        </style>
   
 
     </head>
@@ -148,76 +158,53 @@
         </div>
 
 
-         <section style="background-color: #ebf1fa; margin-top:90px;">
-                <div class="reviews">
-            
-                  <div class="container">
-            
-                    <div class="row">
-                      <div class="col-lg-4 plan_your_trip_form_text">
+        <section style="background-color: #ebf1fa; margin-top: 90px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
                         <div class="reviews-intro">
-                          <h2 class="reviews-heading text-secondary"> Planen Sie Ihre Reise von hier aus </h2>
+                            <h2 class="reviews-heading text-secondary">Planen Sie Ihre Reise von hier aus</h2>
                         </div>
-            
-                      </div>
-                      <div class="col-lg-4 offset-lg-2 plan_your_trip_form">
-                        <div class="col-lg-12 bg-white border rounded rounded-2 my-3 py-5">
-                            <div class="mt-4">
-                              <text>Wie wollen Sie reisen?</text>
-                               <div class="dropdown">
-                                <button class="rounded rounded-1 bg-transparent col-12 dropdown-toggle border border-secondary text-secondary" style="height: 30px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Dropdown buttonn
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Action</a></li>
-                                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                              </div>
-                            </div>
-
-                            <div class="mt-5">
-                                <text>Welche Art der Unterkunft wünschen Sie?</text>
-                                 <div class="dropdown">
-                                  <button class="rounded rounded-1 bg-transparent col-12 dropdown-toggle border border-secondary text-secondary" style="height: 30px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown button
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
-                                </div>
-                            </div>
-                            
-                              <div class="mt-5">
-                                <text>Wie weit sind Sie mit Ihrer Reiseplanung?</text>
-                                 <div class="dropdown">
-                                  <button class="rounded rounded-1 bg-transparent col-12 dropdown-toggle border border-secondary text-secondary" style="height: 30px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown button
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                              <div class="mt-5 d-grid">
-                                <a href="plan-your-sri-lanka-tour.html" class="btn btn-success fw-bold">Plan Your Trip</a>
-                              </div>
-
-                        </div>
-                      </div>
-                                    
                     </div>
-            
-            
-                  </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <div class="bg-white border rounded rounded-2 my-3 py-5 text-center custom-border"> <!-- Added custom-border class -->
+                            <div class="mt-4">
+                                <label for="travel-method">Wie wollen Sie reisen?</label>
+                                <select class="form-select" id="travel-method">
+                                    <option>Action</option>
+                                    <option>Another action</option>
+                                    <option>Something else here</option>
+                                </select>
+                            </div>
+    
+                            <div class="mt-5">
+                                <label for="accommodation-type">Welche Art der Unterkunft wünschen Sie?</label>
+                                <select class="form-select" id="accommodation-type">
+                                    <option>Action</option>
+                                    <option>Another action</option>
+                                    <option>Something else here</option>
+                                </select>
+                            </div>
+    
+                            <div class="mt-5">
+                                <label for="planning-progress">Wie weit sind Sie mit Ihrer Reiseplanung?</label>
+                                <select class="form-select" id="planning-progress">
+                                    <option>Action</option>
+                                    <option>Another action</option>
+                                    <option>Something else here</option>
+                                </select>
+                            </div>
+    
+                            <div class="mt-5">
+                                <a href="plan-your-sri-lanka-tour.html" class="btn btn-success fw-bold">Plan Your Trip</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </section>
-
+            </div>
+        </section>
+    
+          
 
         <main id="main">
 
