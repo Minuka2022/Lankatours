@@ -1688,3 +1688,26 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 #sendmessage.show, #errormessage.show, .show {
     display:block;
 }
+
+
+.plan_your_trip_form_text{
+    margin-top: 140px;
+    margin-left: 85px;
+}
+
+.plan_your_trip_form{
+    margin-left: 280px;
+}
+
+@media (max-width: 768px) {
+    .plan_your_trip_form_text{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .plan_your_trip_form{
+        margin-left: 0px;
+    }
+
+    
+}
