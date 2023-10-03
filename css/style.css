@@ -332,6 +332,7 @@ h6 {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .main-nav a:hover,
