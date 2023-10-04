@@ -43,7 +43,8 @@
         <link href="css/cardstyle.css" rel="stylesheet">       
 
         <link href="https://lankatourdriver.com/assets/css/style.css" rel="stylesheet" />
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
         <!--<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>-->
         <!-- Uncomment below i you want to use a preloader -->
@@ -197,20 +198,20 @@
                                             <br>
                                     <div class="form-section">
                                         <p class="ltd-form-title fw-bold">I need a guide who speaks :</p>
-                                        <div class="select-group select-group__center-text col-12">
-                                            <div class="row">
-                                            <label class="col-2">English<br><input type="checkbox" name="language[]"
+                                        <div class="select-group select-group__center-text col-14">
+                                            <div class="row" style="margin-left:10px;">
+                                            <label class="col-5" >English<br><input type="checkbox" name="language[]"
                                                     value="English"></label>
-                                            <label class="col-2">German<br><input type="checkbox" name="language[]"
+                                            <label class="col-5">German<br><input type="checkbox" name="language[]"
                                                     value="German"></label>
-                                            <label class="col-2">French<br><input type="checkbox" name="language[]"
+                                            <!-- <label class="col-2">French<br><input type="checkbox" name="language[]"
                                                     value="French"></label>
                                             <label class="col-2">Italian<br><input type="checkbox" name="language[]"
                                                     value="Italian"></label>
                                             <label class="col-2">Russian<br><input type="checkbox" name="language[]"
                                                     value="Russian"></label>
                                             <label class="col-2">Hindi<br><input type="checkbox" name="language[]"
-                                                    value="Hindi"></label>
+                                                    value="Hindi"></label> -->
                                                 </div>
                                         </div>
                                         <br>
@@ -232,28 +233,28 @@
                                                     value="Cultural"></label>
                                             <label class="col-3">Beach Relaxing<br><input type="checkbox" name="vacation-type[]"
                                                     value="Beach Relaxing"></label>
-                                            <label class="col-3">Trekking & Climbing<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-3">Trekking & Climbing<br><input type="checkbox" name="vacation-type[]"
                                                     value="Trekking & Climbing"></label>
-                                            <label class="col-3">Activity and Game<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-3">Activity and Game<br><input type="checkbox" name="vacation-type[]"
                                                     value="Activity and Game"></label>
-                                            <label class="col-3">Boat trips & Island visits<br><input type="checkbox"
+                                            <label class="col-3 mt-3">Boat trips & Island visits<br><input type="checkbox"
                                                     name="vacation-type[]" value="Boat trips & Island visits"></label>
-                                            <label class="col-3">Train Rides<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-3">Train Rides<br><input type="checkbox" name="vacation-type[]"
                                                     value="Train rides"></label>
-                                            <label class="col-3">Factory Visits<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-2">Factory Visits<br><input type="checkbox" name="vacation-type[]"
                                                     value="Factory visits"></label>
-                                            <label class="col-3">Water Sports<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-2">Water Sports<br><input type="checkbox" name="vacation-type[]"
                                                     value="Water sport"></label>
-                                            <label class="col-3">Snorkeling & Diving<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-2">Snorkeling & Diving<br><input type="checkbox" name="vacation-type[]"
                                                     value="Snorkeling & Diving"></label>
-                                            <label class="col-3">Whales and Dolphins<br><input type="checkbox" name="vacation-type[]"
+                                            <label class="col-3 mt-2">Whales and Dolphins<br><input type="checkbox" name="vacation-type[]"
                                                     value="Whales and dolphin Trips"></label>
                                         </div>
                                     </div>
                                     <br><br>
 
 
-                                    <div class="form-section">
+                                    <!-- <div class="form-section">
                                         <p class="ltd-form-title fw-bold">My preferred accommodation type :</p>
                                         <div class="select-group select-group__center-text row">
 
@@ -266,7 +267,7 @@
                                             <label class="col-3">Luxury<br><input type="radio" name="accommodation"
                                                     value="Luxury"></label>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <br><br>
 
                                     <div class="form-section">
@@ -296,23 +297,23 @@
 
                                     <div class="form-section">
                                         <small>Adults :</small>
-                                        <input type="number" min="1" max="100" name="adults" class="form-control"
+                                        <input type="number" min="1" max="100" name="adults" class="form-control mb-3"
                                             required />
                                         <small>Children :</small>
 
-                                        <input type="number" min="0" max="100" name="children" class="form-control"
+                                        <input type="number" min="0" max="100" name="children" class="form-control mb-2"
                                             required /><br>
                                         <small>Start Date :</small>
-                                        <input type="text" name="start" class="form-control datepicker"
+                                        <input type="text" name="start" class="form-control datepicker mb-4"
                                             placeholder="dd/mm/yyyy" />
                                         <small>End Date :</small>
-                                        <input type="text" name="end" class="form-control datepicker"
+                                        <input type="text" name="end" class="form-control datepicker mb-4"
                                             placeholder="dd/mm/yyyy" />
                                         <small>Flight Number :</small>
-                                        <input type="text" name="flight" class="form-control" />
+                                        <input type="text" name="flight" class="form-control " />
                                         <br>
                                         <small>Name :</small>
-                                        <input type="text" name="name" class="form-control" required />
+                                        <input type="text" name="name" class="form-control mb-3" required />
                                         <small>Email :</small>
                                         <input type="email" name="email" class="form-control" required />
                                     </div>
