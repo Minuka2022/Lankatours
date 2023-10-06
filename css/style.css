@@ -421,12 +421,14 @@ h6 {
     padding-top: 18px;
     background: rgb(40, 38, 70);
     transition: 0.4s;
+    
 }
 
 .mobile-nav * {
     margin: 0;
     padding: 0;
     list-style: none;
+       text-decoration: none;
 }
 
 .mobile-nav a {
@@ -1541,11 +1543,13 @@ h6 {
     #header {
         height: 70px;
         padding: 15px 0;
+           text-decoration: none;
     }
 
     #header .logo h1 {
         font-size: 28px;
         padding: 8px 0;
+           text-decoration: none;
     }
 
     #why-us .why-us-content {
