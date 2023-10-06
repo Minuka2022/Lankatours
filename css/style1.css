@@ -802,6 +802,8 @@ footer {
 } */
 .footer-menu {
   margin-top: 30px;
+  font-weight: 400;
+  color: #333333;
 }
 
 .footer-menu-title {
@@ -812,6 +814,7 @@ footer {
   margin-bottom: 0.8em;
   margin-top: 0;
   text-transform: capitalize;
+  font-weight: 400;
 }
 .footer-menu-list {
   list-style: none;
@@ -821,6 +824,7 @@ footer {
 }
 .footer-menu-list li {
   margin-top: 5px;
+  color: #333333;
 }
 
 .footer-social-links {
@@ -829,6 +833,7 @@ footer {
   right: 0; */
   margin-top: 2em;
   margin-bottom: 2em;
+  color: #333333;
 }
 
 .footer-social-links .footer-social-link:first-child {
@@ -838,6 +843,7 @@ footer {
 .footer-social-link {
   font-size: 2em;
   padding: 10px;
+  color: #333333;
 }
 .footer-copyright {
   background-color: #595959;
