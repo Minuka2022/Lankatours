@@ -523,19 +523,21 @@ h6 {
 .section-header h3 {
     font-size: 36px;
     color: #413e66;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     position: relative;
     font-family: "Montserrat", sans-serif;
 }
 
 .section-header p {
-    text-align: center;
+    text-align: left;
     margin: auto;
     font-size: 15px;
     padding-bottom: 60px;
     color: #535074;
-    width: 50%;
+    width: 85%;
+    margin-top:30px;
+    line-height: 2; 
 }
 
 /* Section with background
