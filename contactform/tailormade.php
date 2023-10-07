@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $mail->isSMTP(); // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com'; // Your SMTP server address
     $mail->SMTPAuth = true; // Enable SMTP authentication
-    $mail->Username = 'ayodyakcc@gmail.com'; // Your SMTP username
+    $mail->Username = 'lankatourdriver@gmail.com'; // Your SMTP username
     $mail->Password = 'ocyj ulgo tspo xlkk'; // Your SMTP password
     $mail->SMTPSecure = 'tls'; // Enable TLS encryption; 'ssl' is also possible
     $mail->Port = 587; // TCP port to connect to
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 
 
     // Set email parameters
-    $to = 'ayodyakcc@gmail.com'; // Replace with your recipient email address
+    $to = 'lankatourdriver@gmail.com'; // Replace with your recipient email address
     $subject = 'New Customized Tour Request';
 
     // Build the email message
