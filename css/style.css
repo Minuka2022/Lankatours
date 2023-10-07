@@ -409,6 +409,9 @@ h6 {
 }
 
 /* Mobile Navigation */
+.main-nav1 {
+    display: none; /* Hide the main navigation on mobile */
+}
 
 .mobile-nav {
     position: fixed;
