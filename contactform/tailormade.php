@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
 
-    $to = 'info@lankatourdriver.com';
+    $to = 'ayodyakcc@gmail.com';
     $subject = 'New Customized Tour Request';
 
 
