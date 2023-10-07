@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $mail->Host = 'smtp.gmail.com'; // Your SMTP server address
     $mail->SMTPAuth = true; // Enable SMTP authentication
     $mail->Username = 'ayodyakcc@gmail.com'; // Your SMTP username
-    $mail->Password = 'vzsy oqxj dhwy wvji'; // Your SMTP password
+    $mail->Password = 'ocyj ulgo tspo xlkk'; // Your SMTP password
     $mail->SMTPSecure = 'tls'; // Enable TLS encryption; 'ssl' is also possible
     $mail->Port = 587; // TCP port to connect to
 
