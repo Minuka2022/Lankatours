@@ -115,7 +115,7 @@ if (isset($_POST['submit'])) {
     try {
         // Send the email
         if ($mail->send()) {
-            header("Location: /thank-you");
+            echo '<script>window.location.href = "thank_you.html";</script>';
         } else {
             echo "Email could not be sent. Error: " . $mail->ErrorInfo;
         }
