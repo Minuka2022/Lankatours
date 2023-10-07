@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 
 
     // Set email parameters
-    $to = 'lankatourdriver@gmail.com'; // Replace with your recipient email address
+    $to = 'info@lankatours.at'; // Replace with your recipient email address
     $subject = 'New Customized Tour Request';
 
     // Build the email message
