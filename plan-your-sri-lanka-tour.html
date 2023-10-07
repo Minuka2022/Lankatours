@@ -123,7 +123,29 @@
 
 
 
+<script>
+    // Function to set the form fields based on data from local storage
+    function autoFillFormFields() {
+        // Retrieve the stored values from local storage
+        var travelMethod = localStorage.getItem('travelMethod_submit'); // Unique ID for this page
+        var accommodationType = localStorage.getItem('accommodationType_submit'); // Unique ID for this page
+        var planningProgress = localStorage.getItem('planningProgress_submit'); // Unique ID for this page
 
+        // Check if values exist and pre-fill the form fields
+        if (travelMethod !== null) {
+            document.getElementById('travel-method').value = travelMethod;
+        }
+        if (accommodationType !== null) {
+            document.getElementById('accommodation-type').value = accommodationType;
+        }
+        if (planningProgress !== null) {
+            document.getElementById('planning-progress').value = planningProgress;
+        }
+    }
+
+    // Call the autoFillFormFields function when the page loads
+    window.addEventListener('load', autoFillFormFields);
+</script>
 
 
     <section class="offset-lg-2" style="padding-bottom:10px;padding-top:20px;">
@@ -131,195 +153,114 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="ltd-form">
-                        <form autocomplete="off" action="contactform/tailormade.php" method="POST">
-                            <div class="card">
-                                <div class="card-body">
-
-                                    <script>
-                                        // Function to set the form fields based on data from local storage
-                                        function autoFillFormFields() {
-                                            // Retrieve the stored values from local storage
-                                            var travelMethod = localStorage.getItem('travelMethod_submit'); // Unique ID for this page
-                                            var accommodationType = localStorage.getItem('accommodationType_submit'); // Unique ID for this page
-                                            var planningProgress = localStorage.getItem('planningProgress_submit'); // Unique ID for this page
-                                    
-                                            // Check if values exist and pre-fill the form fields
-                                            if (travelMethod !== null) {
-                                                document.getElementById('travel-method').value = travelMethod;
-                                            }
-                                            if (accommodationType !== null) {
-                                                document.getElementById('accommodation-type').value = accommodationType;
-                                            }
-                                            if (planningProgress !== null) {
-                                                document.getElementById('planning-progress').value = planningProgress;
-                                            }
-                                        }
-                                    
-                                        // Call the autoFillFormFields function when the page loads
-                                        window.addEventListener('load', autoFillFormFields);
-                                    </script>
-                                    
-                                    </script>
-                                            <div class="mt-4" >
-                                                <label for="travel-method">Wie wollen Sie reisen?</label>
-                                                <select class="form-select" id="travel-method" name="travel-method">
-                                                    <option value="select">Select</option>
-                                                    <option value="Alone">Alone</option>
-                                                    <option value="As a pair">As a pair</option>
-                                                    <option value="With the family">With the family</option>
-                                                    <option value="With friends">With friends</option>
-                                                </select>
-                                            </div>
-                    
-                                            <div class="mt-5">
-                                                <label for="accommodation-type">Welche Art der Unterkunft wünschen Sie?</label>
-                                                <select class="form-select" id="accommodation-type" name="accommodation-type">
-                                                    <option value="select">Select</option>
-                                                    <option value="Budget (2 stars)">Budget (2 stars)</option>
-                                                    <option value="Standard (3 stars - most booked)">Standard (3 stars - most booked)</option>
-                                                    <option value="Comfort (4 stars)">Comfort (4 stars)</option>
-                                                    <option value="Luxury (5+ stars)">Luxury (5+ stars)</option>
-                                                </select>
-                                            </div>
-                    
-                                            <div class="mt-5">
-                                                <label for="planning-progress">Wie weit sind Sie mit Ihrer Reiseplanung?</label>
-                                                <select class="form-select" id="planning-progress" name="planning-progress">
-                                                    <option value="select">Select</option>
-                                                    <option value="A NEO travel specialist should advise me">A NEO travel specialist should advise me</option>
-                                                    <option value="I already know roughly what I want">I already know roughly what I want</option>
-                                                    <option value="I will book directly if your offer is right">I will book directly if your offer is right</option>
-                                                </select>
-                                            </div>
-                    
-                                            <br>
-                                    <div class="form-section">
-                                        <p class="ltd-form-title fw-bold">I need a guide who speaks :</p>
-                                        <div class="select-group select-group__center-text col-14">
-                                            <div class="row" style="margin-left:10px;">
-                                            <label class="col-5" >English<br><input type="checkbox" name="language[]"
-                                                    value="English"></label>
-                                            <label class="col-5">German<br><input type="checkbox" name="language[]"
-                                                    value="German"></label>
-                                            <!-- <label class="col-2">French<br><input type="checkbox" name="language[]"
-                                                    value="French"></label>
-                                            <label class="col-2">Italian<br><input type="checkbox" name="language[]"
-                                                    value="Italian"></label>
-                                            <label class="col-2">Russian<br><input type="checkbox" name="language[]"
-                                                    value="Russian"></label>
-                                            <label class="col-2">Hindi<br><input type="checkbox" name="language[]"
-                                                    value="Hindi"></label> -->
-                                                </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="col-12">
-                                        <label class="d-grid">Specify (if not listed)<br><input type="text"
-                                                name="other-language"></label>
-                                            </div>
-                                    </div>
-
-                                    <br><br>
-                                    <div class="form-section">
-                                        <p class="ltd-form-title fw-bold">Art des Urlaubs, den ich suche:</p>
-                                        <div class="select-group select-group__center-text row">
-
-                                            <label class="col-4">Natur, Wildtiere & Safari<br><input type="checkbox"
-                                                    name="vacation-type[]" value="Nature, Wildlife & Safari"></label>
-                                            <label class="col-3">Kultur & Erbe<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Cultural"></label>
-                                            <label class="col-3">Strand Entspannung<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Beach Relaxing"></label>
-                                            <label class="col-3 mt-3">Trekking & Klettern<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Trekking & Climbing"></label>
-                                            <label class="col-3 mt-3">Aktivität und Spiel<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Activity and Game"></label>
-                                            <label class="col-3 mt-3">Bootstouren & Inselbesuche<br><input type="checkbox"
-                                                    name="vacation-type[]" value="Boat trips & Island visits"></label>
-                                            <label class="col-3 mt-3">Zugfahrten<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Train rides"></label>
-                                            <label class="col-3 mt-2">Fabrikbesuche<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Factory visits"></label>
-                                            <label class="col-3 mt-2">Wassersport<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Water sport"></label>
-                                            <label class="col-3 mt-2">Schnorcheln & Tauchen<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Snorkeling & Diving"></label>
-                                            <label class="col-3 mt-2">Wale und Delfine<br><input type="checkbox" name="vacation-type[]"
-                                                    value="Whales and dolphin Trips"></label>
-                                        </div>
-                                    </div>
-
-                                    <br><br>
-
-
-                                    <!-- <div class="form-section">
-                                        <p class="ltd-form-title fw-bold">My preferred accommodation type :</p>
-                                        <div class="select-group select-group__center-text row">
-
-                                            <label class="col-3">Budget<br><input type="radio" name="accommodation"
-                                                    value="Budget"></label>
-                                            <label class="col-3">Standard<br><input type="radio" name="accommodation"
-                                                    value="Standard"></label>
-                                            <label class="col-3">Premium<br><input type="radio" name="accommodation"
-                                                    value="Premium"></label>
-                                            <label class="col-3">Luxury<br><input type="radio" name="accommodation"
-                                                    value="Luxury"></label>
-                                        </div>
-                                    </div> -->
-                                    <br><br>
-
-                                    <div class="form-section">
-                                                <p class="ltd-form-title fw-bold">Zusätzliche Dienstleistungen, die ich benötige :</p>
-                                                <div class="select-group select-group__center-text row">
-
-                                                    <label class="col-4">Zugtickets<br><input type="checkbox" name="additional[]"
-                                                            value="Train Tickets"></label>
-                                                    <label class="col-4">Eintrittskarten<br><input type="checkbox" name="additional[]"
-                                                            value="Attraction Tickets"></label>
-                                                    <label class="col-4">Flughafentransfer<br><input type="checkbox" name="additional[]"
-                                                            value="Airport Transfer"></label>
-
-                                                </div>
-                                            </div>
-
-
-                                    <br><br>
-
-
-                                    <div class="form-section">
-                                        <p class="ltd-form-title fw-bold">Meine zusätzlichen Anforderungen :</p>
-                                        <textarea name="user-message" rows="10" cols="80" style="max-width:100%"></textarea>
-                                    </div><br><br>
-
-                                    <div class="form-section">
-                                        <small>Erwachsene :</small>
-                                        <input type="number" min="1" max="100" name="adults" class="form-control mb-3" required />
-                                        <small>Kinder :</small>
-                                        <input type="number" min="0" max="100" name="children" class="form-control mb-2" required /><br>
-                                        <small>Startdatum :</small>
-                                        <input type="text" name="start" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
-                                        <small>Enddatum :</small>
-                                        <input type="text" name="end" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
-                                        <small>Flugnummer :</small>
-                                        <input type="text" name="flight" class="form-control " /><br>
-                                        <small>Name :</small>
-                                        <input type="text" name="name" class="form-control mb-3" required />
-                                        <small>Email :</small>
-                                        <input type="email" name="email" class="form-control" required />
-                                    </div>
-
+                       
+                            <form method="post" action="contactform/tailormade.php">
+                                <!-- Add your form fields here -->
+                                <div class="mt-4">
+                                    <label for="travel-method">Wie wollen Sie reisen?</label>
+                                    <select class="form-select" id="travel-method" name="travel-method">
+                                        <option value="select">Select</option>
+                                        <option value="Alone">Alone</option>
+                                        <option value="As a pair">As a pair</option>
+                                        <option value="With the family">With the family</option>
+                                        <option value="With friends">With friends</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <br>
-                           <button class="btn btn-block btn-success theme-btn"
-                                style="border-radius: 0; height: 48px; margin-top: 10px" type="submit" name="submit">
-                                Erhalten Sie Ihren Sri Lanka Reiseplan
-                            </button>
-
-                            <div id="recaptcha" class="g-recaptcha"
-                                data-sitekey="6Le3wKIUAAAAAJy7JExTcWhzUvQnH1GhGbXasjv4" data-callback="onSubmit"
-                                data-size="invisible"></div>
-                        </form>
+                        
+                                <div class="mt-5">
+                                    <label for="accommodation-type">Welche Art der Unterkunft wünschen Sie?</label>
+                                    <select class="form-select" id="accommodation-type" name="accommodation-type">
+                                        <option value="select">Select</option>
+                                        <option value="Budget (2 stars)">Budget (2 stars)</option>
+                                        <option value="Standard (3 stars - most booked)">Standard (3 stars - most booked)</option>
+                                        <option value="Comfort (4 stars)">Comfort (4 stars)</option>
+                                        <option value="Luxury (5+ stars)">Luxury (5+ stars)</option>
+                                    </select>
+                                </div>
+                        
+                                <div class="mt-5">
+                                    <label for="planning-progress">Wie weit sind Sie mit Ihrer Reiseplanung?</label>
+                                    <select class="form-select" id="planning-progress" name="planning-progress">
+                                        <option value="select">Select</option>
+                                        <option value="A NEO travel specialist should advise me">A NEO travel specialist should advise me</option>
+                                        <option value="I already know roughly what I want">I already know roughly what I want</option>
+                                        <option value="I will book directly if your offer is right">I will book directly if your offer is right</option>
+                                    </select>
+                                </div>
+                        
+                                <!-- Add more form fields here -->
+                        
+                                <div class="form-section">
+                                    <p class="ltd-form-title fw-bold">I need a guide who speaks :</p>
+                                    <div class="select-group select-group__center-text col-14">
+                                        <!-- Add language checkboxes here -->
+                                        <div class="row" style="margin-left:10px;">
+                                            <label class="col-5">English<br><input type="checkbox" name="language[]" value="English"></label>
+                                            <label class="col-5">German<br><input type="checkbox" name="language[]" value="German"></label>
+                                        </div>
+                                    </div>
+                                    <br>
+                        
+                                    <div class="col-12">
+                                        <label class="d-grid">Specify (if not listed)<br><input type="text" name="other-language"></label>
+                                    </div>
+                                </div>
+                        
+                                <!-- Add more form sections and fields here -->
+                        
+                                <div class="form-section">
+                                    <p class="ltd-form-title fw-bold">Art des Urlaubs, den ich suche:</p>
+                                    <div class="select-group select-group__center-text row">
+                                        <!-- Add vacation type checkboxes here -->
+                                        <label class="col-4">Natur, Wildtiere & Safari<br><input type="checkbox" name="vacation-type[]" value="Nature, Wildlife & Safari"></label>
+                                        <label class="col-3">Kultur & Erbe<br><input type="checkbox" name="vacation-type[]" value="Cultural"></label>
+                                        <label class="col-3">Strand Entspannung<br><input type="checkbox" name="vacation-type[]" value="Beach Relaxing"></label>
+                                        <!-- Add more checkboxes here -->
+                                    </div>
+                                </div>
+                        
+                                <!-- Add more form sections and fields here -->
+                        
+                                <div class="form-section">
+                                    <p class="ltd-form-title fw-bold">Zusätzliche Dienstleistungen, die ich benötige:</p>
+                                    <div class="select-group select-group__center-text row">
+                                        <!-- Add additional service checkboxes here -->
+                                        <label class="col-4">Zugtickets<br><input type="checkbox" name="additional[]" value="Train Tickets"></label>
+                                        <label class="col-4">Eintrittskarten<br><input type="checkbox" name="additional[]" value="Attraction Tickets"></label>
+                                        <label class="col-4">Flughafentransfer<br><input type="checkbox" name="additional[]" value="Airport Transfer"></label>
+                                        <!-- Add more checkboxes here -->
+                                    </div>
+                                </div>
+                        
+                                <!-- Add more form sections and fields here -->
+                        
+                                <div class="form-section">
+                                    <p class="ltd-form-title fw-bold">Meine zusätzlichen Anforderungen:</p>
+                                    <textarea name="user-message" rows="10" cols="80" style="max-width:100%"></textarea>
+                                </div>
+                        
+                                <!-- Add more form sections and fields here -->
+                        
+                                <div class="form-section">
+                                    <small>Erwachsene :</small>
+                                    <input type="number" min="1" max="100" name="adults" class="form-control mb-3" required />
+                                    <small>Kinder :</small>
+                                    <input type="number" min="0" max="100" name="children" class="form-control mb-2" required /><br>
+                                    <small>Startdatum :</small>
+                                    <input type="text" name="start" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
+                                    <small>Enddatum :</small>
+                                    <input type="text" name="end" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
+                                    <small>Flugnummer :</small>
+                                    <input type="text" name="flight" class="form-control " /><br>
+                                    <small>Name :</small>
+                                    <input type="text" name="name" class="form-control mb-3" required />
+                                    <small>Email :</small>
+                                    <input type="email" name="email" class="form-control" required />
+                                </div>
+                                <br>
+                                <!-- Add a submit button -->
+                                <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
+                            </form>
 
 
                     </div>
