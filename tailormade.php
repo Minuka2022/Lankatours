@@ -39,17 +39,17 @@ if (isset($_POST['submit'])) {
     // Collect and append form data to the message
 
     // Travel method
-    $message .= '<p><b>Wie wollen Sie reisen?</b>: ' . $_POST['travel-method'] . '</p>';
+$message .= '<p><b>How do you want to travel?</b>: ' . $_POST['travel-method'] . '</p>';
 
-    // Accommodation type
-    $message .= '<p><b>Welche Art der Unterkunft wünschen Sie?</b>: ' . $_POST['accommodation-type'] . '</p>';
+// Accommodation type
+$message .= '<p><b>What type of accommodation do you prefer?</b>: ' . $_POST['accommodation-type'] . '</p>';
 
-    // Planning progress
-    $message .= '<p><b>Wie weit sind Sie mit Ihrer Reiseplanung?</b>: ' . $_POST['planning-progress'] . '</p>';
+// Planning progress
+$message .= '<p><b>How far along are you with your travel planning?</b>: ' . $_POST['planning-progress'] . '</p>';
 
     // Languages
     if (!empty($_POST['language'])) {
-        $message .= '<p><b>Sprachen:</b></p>';
+        $message .= '<p><b>Languages:</b></p>';
         foreach ($_POST['language'] as $value) {
             $message .= '<p>' . $value . '</p>';
         }
@@ -57,12 +57,12 @@ if (isset($_POST['submit'])) {
 
     // Other language
     if (!empty($_POST['other-language'])) {
-        $message .= '<p><b>Andere Sprache:</b>: ' . $_POST['other-language'] . '</p>';
+        $message .= '<p><b>Other language:</b>: ' . $_POST['other-language'] . '</p>';
     }
 
     // Vacation type
     if (!empty($_POST['vacation-type'])) {
-        $message .= '<p><b>Art des Urlaubs, den ich suche:</b></p>';
+        $message .= '<p><b>Type of vacation that I am looking for:</b></p>';
         foreach ($_POST['vacation-type'] as $value) {
             $message .= '<p>' . $value . '</p>';
         }
@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
 
     // Additional services
     if (!empty($_POST['additional'])) {
-        $message .= '<p><b>Zusätzliche Dienstleistungen, die ich benötige:</b></p>';
+        $message .= '<p><b>Additional services that I need:</b></p>';
         foreach ($_POST['additional'] as $value) {
             $message .= '<p>' . $value . '</p>';
         }
@@ -78,24 +78,24 @@ if (isset($_POST['submit'])) {
 
     // User message
     if (!empty($_POST['user-message'])) {
-        $message .= '<p><b>Meine zusätzlichen Anforderungen:</b></p>';
+        $message .= '<p><b>My additional requirements:</b></p>';
         $message .= '<p>' . $_POST['user-message'] . '</p>';
     }
 
     // Adults
-    $message .= '<p><b>Erwachsene:</b>: ' . $_POST['adults'] . '</p>';
+    $message .= '<p><b>Adult:</b>: ' . $_POST['adults'] . '</p>';
 
     // Children
-    $message .= '<p><b>Kinder:</b>: ' . $_POST['children'] . '</p>';
+    $message .= '<p><b>Children:</b>: ' . $_POST['children'] . '</p>';
 
     // Start date
-    $message .= '<p><b>Startdatum:</b>: ' . $_POST['start'] . '</p>';
+    $message .= '<p><b>Start date:</b>: ' . $_POST['start'] . '</p>';
 
     // End date
-    $message .= '<p><b>Enddatum:</b>: ' . $_POST['end'] . '</p>';
+    $message .= '<p><b>End date:</b>: ' . $_POST['end'] . '</p>';
 
     // Flight number
-    $message .= '<p><b>Flugnummer:</b>: ' . $_POST['flight'] . '</p>';
+    $message .= '<p><b>Flight number:</b>: ' . $_POST['flight'] . '</p>';
 
     // Name
     $message .= '<p><b>Name:</b>: ' . $_POST['name'] . '</p>';
