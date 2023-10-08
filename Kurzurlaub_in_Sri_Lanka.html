@@ -137,11 +137,17 @@
                             <input type="text" name="name" class="form-control" required/>
                             <small>Email :</small>
                             <input type="email" name="email" class="form-control" required/>
-                            <small>Paket :</small><br>
+                           
+                              <small>Paket :</small><br>
+                              <input type="text" class="form-control" value="Kurzurlaub in Sri Lanka" readonly />
+                              <input type="hidden" name="package" value="Short Break in Sri Lanka" />
                           
+                            <small>Erwachsene :</small><br>
                             <input type="number" min="1" max="100" name="adults" class="form-control" required/>
                             <small>Kinder :</small>
                             <input type="number" min="0" max="100" name="children" class="form-control" required/>
+                            <small>Additional Notes:</small><br>
+                            <textarea name="note" class="form-control"></textarea>
                         </div>
                     </div>
                   <button class="btn btn-block btn-success mt-5" style="border: radius 7px; height:48px;margin-top:10px" type="submit">Jetzt anfragen</button>

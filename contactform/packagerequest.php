@@ -6,6 +6,7 @@ if ($_POST) {
     $strPackage = $_POST["package"];
     $strAdults = $_POST["adults"];
     $strChild = $_POST["children"];
+    $strNote = $_POST["note"];
 
     $to = 'info@lankatours.at';
     $subject = 'Contact Request';
@@ -37,6 +38,10 @@ if ($_POST) {
             . '<tr>'
             . '<td width="20%"><strong>Children</strong></td>'
             . '<td>'.$strChild.'</td>'
+            . '</tr>'
+            .  '<tr>'
+            . '<td width="20%"><strong>Children</strong></td>'
+            . '<td>'.$strNote.'</td>'
             . '</tr>'
             . '</tbody>'
             . '</table>';
