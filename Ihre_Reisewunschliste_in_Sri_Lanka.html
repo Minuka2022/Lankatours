@@ -97,7 +97,7 @@
         <!-- main container -->
         <main id="main">
           <!-- main tour information -->
-          <section class="container-fluid trip-info">
+          <section class="container-fluid ">
             <div class="same-height two-columns row">
               <div class="height col-md-6">
                 <!-- top image slideshow -->
@@ -127,27 +127,35 @@
               <div class="height col-md-6 text-col">
                 <div class="holder">
                   <form action="contactform/packagerequest.php" method="POST">
-                    <div class="card">
+                    <br>
+                <div class="card">
+                  
+                    <h5><strong>Beginnen wir die Reise</strong></h5>
+                    <div class="card-body">
+                        <small>Name :</small>
+                        <input type="text" name="name" class="form-control" required/>
+                        <small>Email :</small>
+                        <input type="email" name="email" class="form-control" required/>
+                       
+                          <small>Paket :</small><br>
+                          <input type="text" class="form-control" value="Kurzurlaub in Sri Lanka" readonly />
+                          <input type="hidden" name="package" value="Short Break in Sri Lanka" />
                       
-                        <h5><strong>Beginnen wir die Reise</strong></h5>
-                        <div class="card-body">
-                            <small>Name :</small>
-                            <input type="text" name="name" class="form-control" required/>
-                            <small>Email :</small>
-                            <input type="email" name="email" class="form-control" required/>
-                            <small>Paket :</small><br>
-                          
-                            <input type="number" min="1" max="100" name="adults" class="form-control" required/>
-                            <small>Kinder :</small>
-                            <input type="number" min="0" max="100" name="children" class="form-control" required/>
-                        </div>
+                        <small>Erwachsene :</small><br>
+                        <input type="number" min="1" max="100" name="adults" class="form-control" required/>
+                        <small>Kinder :</small>
+                        <input type="number" min="0" max="100" name="children" class="form-control" required/>
+                        <small>Additional Notes:</small><br>
+                        <textarea name="note" class="form-control"></textarea>
                     </div>
-                  <button class="btn btn-block btn-success mt-5" style="border: radius 7px; height:48px;margin-top:10px" type="submit">Jetzt anfragen</button>
-                    <div id='recaptcha' class="g-recaptcha"
-                        data-sitekey="6Le3wKIUAAAAAJy7JExTcWhzUvQnH1GhGbXasjv4"
-                        data-callback="onSubmit"
-                        data-size="invisible"></div>
-                </form>
+                </div>
+              <button class="btn btn-block btn-success mt-5" style="border: radius 7px; height:48px;margin-top:10px" type="submit">Jetzt anfragen</button>
+                <div id='recaptcha' class="g-recaptcha"
+                    data-sitekey="6Le3wKIUAAAAAJy7JExTcWhzUvQnH1GhGbXasjv4"
+                    data-callback="onSubmit"
+                    data-size="invisible"></div>
+                    <br>
+            </form>
 
               
                 </div>
