@@ -40,7 +40,7 @@ if ($_POST) {
             . '<td>'.$strChild.'</td>'
             . '</tr>'
             .  '<tr>'
-            . '<td width="20%"><strong>Children</strong></td>'
+            . '<td width="20%"><strong>Note</strong></td>'
             . '<td>'.$strNote.'</td>'
             . '</tr>'
             . '</tbody>'
