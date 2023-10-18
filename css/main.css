@@ -4917,7 +4917,7 @@ a.thumbnail img {
 	font-style: italic;
 }
 
-/* trip info styles */
+trip info styles
 
 .trip-info {
 	background: #fafafa;
@@ -9443,11 +9443,11 @@ h4,
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-	.trip-info .bg-stretch {
+	.trip-in .bg-stretch {
 		position: static;
 	}
 
-	.trip-info .bg-stretch img {
+	.trip-in .bg-stretch img {
 		width: 100% !important;
 		height: auto !important;
 		margin: 0 !important;
@@ -11972,46 +11972,6 @@ h4,
 		padding: 90px 10px;
 	}
 
-	.trip-info {
-		padding-bottom: 0;
-	}
-
-	.trip-info>.row {
-		height: calc(100vh - 101px);
-	}
-
-	.trip-info>.row>.height {
-		min-height: 100%;
-	}
-
-	.trip-info .reviews-info {
-		margin-bottom: 45px;
-	}
-
-	.trip-info .social-share li .ico {
-		margin-right: 10px;
-	}
-
-	.trip-info .text-col .holder {
-		padding: 100px 20px 100px;
-	}
-
-	.trip-info .description {
-		margin-bottom: 90px;
-	}
-
-	.trip-info .btn-holder {
-		margin-bottom: 100px;
-	}
-
-	.trip-info .btn-holder {
-		margin-bottom: 100px;
-	}
-
-	.trip-form .trip-form {
-		margin-top: 10%;
-	}
-
 }
 
 @media only screen and (max-width: 1599px) {
@@ -12121,6 +12081,7 @@ h4,
 		width: 100% !important;
 		height: auto !important;
 		margin: 0 !important;
+		
 	}
 
 	.featured-content .height {
