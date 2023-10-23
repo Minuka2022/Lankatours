@@ -531,60 +531,260 @@
                         </div>
                     </div>
 
+                                <style>
+                                    *{
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                                }
+
+                                body{
+                                background-color: rgba(0, 0, 0, 0.938);
+                                }
+
+                                .main-wrapper{
+                                max-width: 1440px;
+                                margin: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                height: 60vh;
+                                }
+                                .slider-wrapper{
+                                width: 50%;
+                                height: 500px;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                margin: auto;
+                                overflow: hidden;
+                                }
+
+                                .slides{
+                                width: 100%;
+                                position: absolute;
+                                transition: transform .4s ease-in-out;
+                                }
+                                .slides h1{
+                                
+                                position: relative;
+                                top: 5rem;
+                                left: 1rem;
+                                backdrop-filter: blur(7px);
+                                width: 9rem;
+                                padding: 1rem;
+
+                                }
+                                .slides img{
+                                width: 100%;
+                                object-fit:fill;
+                                border-radius: 0%;
+                                }
+                                .slider-btns{
+                                position: absolute;
+                                top: 45%;
+                                z-index: 2;
+                                width: 100;
+                                width: 90%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                }
+                                .slider-btns span{
+                                padding: 1rem 1.2rem;
+                                font-size: 1.5rem;
+                                background: rgba(156, 156, 156, 0.61);
+                                border-radius: 50%;
+                                color:  #000000f8;
+                                cursor: pointer;
+                                }
+                                .dots{
+                                position: absolute;
+                                width: 100%;
+                                top: 90%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: .5rem;
+                                z-index: 1;
+                                }
+
+                                .dots .dot{
+                                width: 1rem;
+                                height: 1rem;
+                                background-color: rgb(77, 77, 77);
+                                opacity: .2;
+                                border-radius: 50%;
+                                transition: opacity .2s ease-in-out;
+                                cursor: pointer;
+                                }
+
+                                @media screen and (max-width:950px) {
+                                .slider-wrapper{
+                                    width: 70%;
+                                }
+                                }
+
+                                @media screen and (max-width:680px) {
+                                .slider-wrapper{
+                                    width: 90%;
+                                }
+                                }
+                                    </style>
+
+          
 
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
+
+                    <div class="main-wrapper row col-md-12">
+                        <div class="slider-btns">
+                          <span id="prev-btn"><i class="fa fa-chevron-left"></i></span>
+                          <span id="next-btn"><b><i class="fa fa-chevron-right"></i></b></i></span>
+                        </div>
+                        <div class="slider-wrapper">
+                          <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                    
+                          </div>
+                          <div class="slides">
+                           
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-honda-fit-shuttle-grey.jpg" alt="Honda Fit Shuttle Grey" style="width:100%;">
-                        </div>
-
-                        <div class="item">
+                          </div>
+                          <div class="slides">
+                           
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-toyota-hiace-highroof-white.jpg" alt="Toyota Hiace Highroof White" style="width:100%;">
-                        </div>
-
-                        <div class="item">
+                          </div>
+                          <div class="slides">
+                            
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-toyota-premio.jpg" alt="Toyota Premio" style="width:100%;">
-                        </div>
-
-                        <div class="item">
+                          </div>
+                          <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-honda-fit-shuttle-red.jpg" alt="Honda Fit Shuttle Red" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-honda-fit-shuttle.jpg" alt="Honda Fit Shuttle" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-toyota-hiace-super-gl-green.jpg" alt="Toyota Hiace Super Gl Green" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-nissan-caravan.jpg" alt="Nissan Caravan" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-toyota-hiace-highroof-white-alpha-kit.jpg" alt="Toyota Hiace Highroof White Alpha Kit" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-honda-fit.jpg" alt="Honda Fit" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-toyota-hiace-highroof.jpg" alt="Toyota Hiace Highroof" style="width:100%;">
                         </div>
 
-                        <div class="item">
+                        <div class="slides">
                             <img src="assets/img/fleet/lankatourdriver.com-fleet-toyota-hiace-super-gl-black.jpg" alt="Toyota Hiace Super Gl Black" style="width:100%;">
                         </div>
+                        
+                        </div>
+                      </div>
+                    
+                        
                     </div>
+                
                 </div>
             </div>
-
+            
         </div>
     </section>
+
+
+    <script>
+
+const slides = document.querySelectorAll('.slides');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const dots = document.querySelectorAll('.dot')
+
+
+let index = 0;
+
+// Adding opacity to first dot on first time
+
+dots[0].style.opacity='1'
+
+// positioning the slides
+
+slides.forEach((slide,index)=>{
+  slide.style.left=`${index*100}%`
+});
+
+
+// move slide function
+
+const moveSlide = () =>{
+  slides.forEach((slide)=>{
+    slide.style.transform=`translateX(-${index*100}%)`;
+  });
+}
+
+// remove dots opacity 1 from all dots
+
+const removeDotsOpacity = () =>{
+  dots.forEach((dot)=>{
+    dot.style.opacity='.2';
+  });
+}
+
+dots.forEach((dot,i)=>{
+  dot.addEventListener("click",(e)=>{
+    index=i;
+    removeDotsOpacity();
+    e.target.style.opacity='1'
+    moveSlide();
+  })
+});
+
+// show the previous slide
+
+prevBtn.addEventListener('click',()=>{
+  if(index===0) return index;
+  index--;
+  removeDotsOpacity();
+  dots[index].style.opacity='1'
+  moveSlide();
+});
+
+// show the next slide
+
+nextBtn.addEventListener('click',()=>{
+  if(index===slides.length-1) return index;
+  index++;
+  removeDotsOpacity();
+  dots[index].style.opacity='1'
+  moveSlide();
+});
+
+// auto play slide
+
+
+
+    </script>
 
     <footer id="footer" class="section-bg"></footer>
 
