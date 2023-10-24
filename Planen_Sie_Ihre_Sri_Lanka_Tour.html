@@ -108,14 +108,14 @@
    <section class="offset-lg-2" style="padding-bottom:10px;padding-top:20px;">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" id="scrollToForm">
 
                 <p>Seit mehr als 15 Jahren ist Lanka Tours der bevorzugte Partner für Reisende, die eine maßgeschneiderte sri lanka fahrer geführte reise suchen. Unsere Expertise garantiert, dass Sie das Beste aus Ihrer Reise herausholen, begleitet von einem erfahrenen fahrer sri lanka.</p>
                 <p> Mit unseren kostengünstigen Sri Lanka Urlaubspaketen und dem Angebot eines sri lanka privatfahrer für Ihre individuellen Touren müssen Sie sich keine Sorgen um die Organisation oder Navigation machen. Lassen Sie sich von einem professionellen sri lanka privatfahrer durch die atemberaubenden Landschaften Sri Lankas führen und genießen Sie eine unvergessliche sri lanka fahrer geführte reise.</p>
             </div>
         </div>
     </div>
-</section>
+</section >
 
 
 
@@ -144,13 +144,40 @@
 </script>
 
 
-    <section class="offset-lg-2" style="padding-bottom:10px;padding-top:20px;">
+    <section class="offset-lg-2" style="padding-bottom:10px;padding-top:20px;" >
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
                     <div class="ltd-form">
-                       
-                            <form method="post" action="tailormade.php">
+                        <script>
+                            // Function to remove the 'scrollToForm' parameter from the URL
+                            function removeURLParameter(param) {
+                              const url = window.location.href;
+                              const updatedURL = url.replace(new RegExp('[?&]' + param + '=[^&]*'), '');
+                              history.replaceState(null, '', updatedURL);
+                            }
+                          
+                            // Wait for the document to fully load
+                            window.addEventListener('load', function () {
+                              // Check if the 'scrollToForm' URL parameter is present
+                              if (window.location.search.includes('scrollToForm=true')) {
+                                // Remove the 'scrollToForm' parameter from the URL
+                                removeURLParameter('scrollToForm');
+                          
+                                // Get a reference to the form element by its ID
+                                var form = document.getElementById('scrollToForm');
+                                
+                                // Check if the form element exists
+                                if (form) {
+                                  // Use the `scrollIntoView` method to scroll to the form
+                                  form.scrollIntoView({ behavior: 'smooth' });
+                                }
+                              }
+                            });
+                          </script>
+                          
+                          
+                            <form method="post" action="tailormade.php" >
                                 <!-- Add your form fields here -->
                                 <div class="mt-4">
                                     <label for="travel-method">Wie wollen Sie reisen?</label>
