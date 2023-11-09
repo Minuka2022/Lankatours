@@ -281,9 +281,9 @@
                                     <small>Kinder :</small>
                                     <input type="number" min="0" max="100" name="children" class="form-control mb-2" required /><br>
                                     <small>Startdatum :</small>
-                                    <input type="date" name="start" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
+                                    <input type="date" name="start" id="startDate" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
                                     <small>Enddatum :</small>
-                                    <input type="date" name="end" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
+                                    <input type="date" name="end" id="endDate" class="form-control datepicker mb-4" placeholder="dd/mm/yyyy" />
                                     <small>Flugnummer :</small>
                                     <input type="text" name="flight" class="form-control " /><br>
                                     <small>Name :</small>
@@ -296,7 +296,29 @@
                                 <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
                             </form>
 
-
+                            <script>
+                                $(document).ready(function () {
+                                  // Get today's date
+                                  var today = new Date().toISOString().split('T')[0];
+                            
+                                  // Set the minimum value for the start date to today
+                                  $("#startDate").attr("min", today);
+                            
+                                  // Disable the end date initially
+                                  $("#endDate").prop("disabled", true);
+                            
+                                  // When the start date changes
+                                  $("#startDate").change(function () {
+                                    var startDate = $("#startDate").val();
+                                    
+                                    // Set the minimum value for the end date to the selected start date
+                                    $("#endDate").attr("min", startDate);
+                            
+                                    // Enable the end date
+                                    $("#endDate").prop("disabled", false);
+                                  });
+                                });
+                              </script>
                     </div>
                 </div>
             </div>
