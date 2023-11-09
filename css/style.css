@@ -1566,6 +1566,11 @@ h6 {
 }
 
 @media (max-width: 768px) {
+
+    .form-top{
+        margin-top:-40px;
+    }
+
     .back-to-top {
         bottom: 15px;
     }
